@@ -1,0 +1,18 @@
+
+
+.logo{
+    background-image: url(public/cescorp-americas/csss/estilos.css);
+    height: 223px;
+    width: 249px;
+}
+.btn-cescorp {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-cescorp:hover {
+  color: #fff;
+  background-color: #ffbc18;
+  border-color: #ffbc18;
+}
