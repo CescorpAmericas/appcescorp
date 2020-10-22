@@ -4,6 +4,7 @@
 <div class="app-title">
   <div>
     <h1><i class="fa fa-file-text-o"></i> REPORTE VIAJES</h1>
+    <h2>Este es un titulo</h2>
   </div>
   <div>
     @can('factemitidas.create')
