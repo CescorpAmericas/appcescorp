@@ -3,7 +3,7 @@
 @section('content')
 <div class="app-title">
   <div>
-    <h1><i class="fa fa-truck"></i> Reporte viajes</h1>
+    <h1><i class="fa fa-truck"></i> REPORTE VIAJES</h1>
   </div>
   <div>
     @can('repviajes.create')
