@@ -207,7 +207,7 @@ Route::middleware(['auth','revalidate'])->group(function() {
     Route::get('repviajes/{repviaje}', 'RepviajeController@show')->name('repviajes.show')
             ->middleware('permission:repviajes.show');
 
-    Route::get('repviajes/create', 'RepviajeController@create')->name('repviajes.create')
+    Route::get('repviajescreate', 'RepviajeController@create')->name('repviajes.create')
             ->middleware('permission:repviajes.create');
 
     Route::put('repviajes/{repviaje}', 'RepviajeController@update')->name('repviajes.update')

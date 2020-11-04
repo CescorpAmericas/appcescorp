@@ -95,6 +95,13 @@
   {{ Form::text('fecha_descarga', null, ['class'=> 'form-control', 'id'=>'demoDate10', 'type'=>'text', 'placeholder'=>'Seleccione fecha', 'required' => 'required ']) }}
 </div>
 <div class="form-group col-md-2">
+  {{ Form::label('hora_entrega', 'Hora de entrega') }}
+  {{ Form::text('hora_entrega', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'hora_entrega']) }}
+  @if ($errors->has('hora_carga'))
+      <small class="form-text text-danger">{{ $errors->first('hora_carga') }}</small>
+  @endif
+</div>
+<div class="form-group col-md-2">
   {{ Form::label('status', 'Status') }}
   {{ Form::select('status',['1'=>'Programado','2'=>'Proceso','3'=>'Concluido','4'=>'Cancelado'], null, ['class'=> 'form-control','required' => 'required ', 'id'=>'status']) }}
   @if ($errors->has('status'))

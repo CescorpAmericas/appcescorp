@@ -78,7 +78,7 @@
             <li><a class="treeview-item" href="/posibles_proveedores"><i class="icon fa fa-circle-o"></i> Posibles Proveedores</a></li>
             <li><a class="treeview-item" href="/proveedores"><i class="icon fa fa-circle-o"></i> Proveedores</a></li>
             <li><a class="treeview-item" href="operaciones_embarques" class="icon fa fa-circle-o"><i class="icon fa fa-circle-o"></i> Embarques</a></li>
-            <li><a class="treeview-item" href="/reporte_viajes1" class="icon fa fa-circle-o"><i class="icon fa fa-circle-o"></i> Reporte Viajes1</a></li>
+            <!--<li><a class="treeview-item" href="/reporte_viajes1" class="icon fa fa-circle-o"><i class="icon fa fa-circle-o"></i> Reporte Viajes1</a></li>-->
             @can('repviajes.index')
             <li><a class="treeview-item" href="{{ route('repviajes.index') }}"><i class="icon fa fa-circle-o"></i>Reporte Viajes</a></li>
             @endcan
