@@ -1,6 +1,9 @@
-
-<div class="form-group col-md-12">
-  <h3>Datos del Viaje</h3>
+<div class="col-lg-12">
+  <div class="widget-small gris"><i class="icon fa fa-files-o fa-3x"></i>
+    <div class="info">
+      <h4>Datos del Viaje</h4>
+    </div>
+  </div>
 </div>
 <div class="form-group col-md-3">
   {{ Form::label('cliente', 'Nombre del cliente') }}
@@ -115,8 +118,12 @@
       <small class="form-text text-danger">{{ $errors->first('comentario') }}</small>
   @endif
 </div>
-<div class="form-group tile-footer col-md-12">
-<h3>Costos del viaje</h3>
+<div class="col-lg-12">
+  <div class="widget-small warning coloured-icon"><i class="icon fa fa-usd fa-3x"></i>
+    <div class="info">
+      <h4>Costos del viaje</h4>
+    </div>
+  </div>
 </div>
 <div class="form-group col-md-3">
   {{ Form::label('po_o_ci', 'PO o CI') }}
@@ -132,8 +139,12 @@
       <small class="form-text text-danger">{{ $errors->first('flete') }}</small>
   @endif
 </div>
-<div class="form-group tile-footer col-md-12">
-<h4>Costos adicionales</h4>
+<div class="col-lg-12">
+  <div class="widget-small warning coloured-icon"><i class="icon fa fa-usd fa-3x"></i>
+    <div class="info">
+      <h4>Costos adicionales</h4>
+    </div>
+  </div>
 </div>
 <div class="form-group col-md-3">
   {{ Form::label('moviento_falso', 'Movimiento en falso') }}
@@ -198,8 +209,12 @@
       <small class="form-text text-danger">{{ $errors->first('demoras') }}</small>
   @endif
 </div>
-<div class="form-group tile-footer col-md-12">
-<h4>Coste final</h4>
+<div class="col-lg-12">
+  <div class="widget-small warning coloured-icon"><i class="icon fa fa-usd fa-3x"></i>
+    <div class="info">
+      <h4>Costo final</h4>
+    </div>
+  </div>
 </div>
 <div class="form-group col-md-2">
   {{ Form::label('subtotal', 'Subtotal') }}

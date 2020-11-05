@@ -135,7 +135,7 @@
               <div class="col-lg-12">
                 <div class="widget-small warning coloured-icon"><i class="icon fa fa-usd fa-3x"></i>
                   <div class="info">
-                    <h4>Coste final</h4>
+                    <h4>Costo final</h4>
                   </div>
                 </div>
               </div>
