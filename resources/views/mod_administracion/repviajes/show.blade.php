@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div class="col-md-2">
-                <p><strong>PO o CI: </strong><label class="text-muted">$ {{ $repviaje->po_o_ci }}</label></p>
+                <p><strong>PO o CI: </strong><label class="text-muted">{{ $repviaje->po_o_ci }}</label></p>
               </div>
               <div class="col-md-2">
                 <p><strong>Flete: </strong><label class="text-muted">$ {{ $repviaje->flete }}</label></p>
