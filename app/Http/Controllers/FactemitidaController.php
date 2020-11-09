@@ -23,11 +23,11 @@ class FactemitidaController extends Controller
     $factemitidas2 = Factemitida::where('STATUS','=','2')
     ->orderBy('id','desc')
     ->paginate(10);
-    return view('mod_administracion.factemitidas.index', compact('factemitidas1','factemitidas2'));
+    return view('Mod_administracion.factemitidas.index', compact('factemitidas1','factemitidas2'));
 
 
     /*  $factemitidas = Factemitida::paginate();
-      return view('mod_administracion.factemitidas.index', compact('factemitidas'));*/
+      return view('Mod_administracion.factemitidas.index', compact('factemitidas'));*/
     }
 
     /**
@@ -37,7 +37,7 @@ class FactemitidaController extends Controller
      */
     public function create()
     {
-        return view('mod_administracion.factemitidas.create');
+        return view('Mod_administracion.factemitidas.create');
     }
 
     /**
@@ -61,7 +61,7 @@ class FactemitidaController extends Controller
      */
     public function edit(Factemitida $factemitida)
     {
-        return view('mod_administracion.factemitidas.edit', compact('factemitida'));
+        return view('Mod_administracion.factemitidas.edit', compact('factemitida'));
     }
 
     /**

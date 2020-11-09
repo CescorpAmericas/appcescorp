@@ -17,7 +17,7 @@ class ShipmentController extends Controller
     public function index()
     {
       $shipments = Shipment::orderBy('id','desc')->paginate();
-      return view('mod_administracion.shipments.index', compact('shipments'));
+      return view('Mod_administracion.shipments.index', compact('shipments'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ShipmentController extends Controller
      */
     public function create()
     {
-        return view('mod_administracion.shipments.create'); 
+        return view('Mod_administracion.shipments.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class ShipmentController extends Controller
     public function show(Shipment $shipment)
     {
         //dd($shipment->id);
-        return view('mod_administracion.shipments.show', compact('shipment'));
+        return view('Mod_administracion.shipments.show', compact('shipment'));
     }
 
     /**
@@ -63,7 +63,7 @@ class ShipmentController extends Controller
      */
     public function edit(Shipment $shipment)
     {
-        return view('mod_administracion.shipments.edit', compact('shipment'));
+        return view('Mod_administracion.shipments.edit', compact('shipment'));
     }
 
     /**

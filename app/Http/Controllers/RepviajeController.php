@@ -26,10 +26,10 @@ class RepviajeController extends Controller
       $repviajes4 = repviaje::where('status','=','2')
       ->orderBy('id','desc')
       ->paginate(10);
-      return view('mod_administracion.repviajes.index', compact('repviajes1','repviajes2','repviajes3','repviajes4'));
+      return view('Mod_administracion.repviajes.index', compact('repviajes1','repviajes2','repviajes3','repviajes4'));
 
       /*$repviajes= repviaje::orderBy('id','desc')->paginate();
-      return view('mod_administracion.repviajes.index', compact('repviajes'));*/
+      return view('Mod_administracion.repviajes.index', compact('repviajes'));*/
     }
 
     /**
@@ -39,7 +39,7 @@ class RepviajeController extends Controller
      */
     public function create()
     {
-        return view('mod_administracion.repviajes.create');
+        return view('Mod_administracion.repviajes.create');
 
     }
 
@@ -52,8 +52,23 @@ class RepviajeController extends Controller
     public function store(Request $request)
     {
       $repviaje = repviaje::create($request->all());
+      $categorias = $request->input("categorias");
       return redirect()->route('repviajes.edit', $repviaje->id)
       ->with('info','Reporte viaje guardado con éxito');
+
+
+      $repviaje = repviaje::create($request->all());
+      public function store(MensajeFormRequest $request)
+      {
+          $slug = uniqid();
+          $mensaje = new Mensaje(array(
+              'titulo' => $request->get('titulo'),
+              'contenido' => $request->get('contenido'),
+              'slug' => $slug
+          ));
+          $mensaje->save();
+          return redirect('/contacto')->with('status', 'Su ticket ha sido creado, su id única es ' . $slug);
+      }*/
     }
 
     /**
@@ -64,7 +79,7 @@ class RepviajeController extends Controller
      */
     public function show(repviaje $repviaje)
     {
-          return view('mod_administracion.repviajes.show', compact('repviaje'));
+          return view('Mod_administracion.repviajes.show', compact('repviaje'));
     }
 
     /**
@@ -75,7 +90,7 @@ class RepviajeController extends Controller
      */
     public function edit(repviaje $repviaje)
     {
-        return view('mod_administracion.repviajes.edit', compact('repviaje'));
+        return view('Mod_administracion.repviajes.edit', compact('repviaje'));
     }
 
     /**

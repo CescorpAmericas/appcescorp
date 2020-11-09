@@ -29,10 +29,10 @@ class FactrecibidaController extends Controller
       $factrecibidas4 = Factrecibida::where('STATUS','=','4')
       ->orderBy('id','desc')
       ->paginate(10);
-      return view('mod_administracion.factrecibidas.index', compact('factrecibidas1','factrecibidas2','factrecibidas3','factrecibidas4'));
+      return view('Mod_administracion.factrecibidas.index', compact('factrecibidas1','factrecibidas2','factrecibidas3','factrecibidas4'));
 
       /*$factrecibidas = Factrecibida::paginate();
-      return view('mod_administracion.factrecibidas.index', compact('factrecibidas'));*/
+      return view('Mod_administracion.factrecibidas.index', compact('factrecibidas'));*/
     }
 
     /**
@@ -42,7 +42,7 @@ class FactrecibidaController extends Controller
      */
     public function create()
     {
-        return view('mod_administracion.factrecibidas.create');
+        return view('Mod_administracion.factrecibidas.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class FactrecibidaController extends Controller
     public function edit(Factrecibida $factrecibida)
     {
       //dd($factrecibida->id);
-        return view('mod_administracion.factrecibidas.edit', compact('factrecibida'));
+        return view('Mod_administracion.factrecibidas.edit', compact('factrecibida'));
     }
 
     /**
