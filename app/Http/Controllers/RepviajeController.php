@@ -51,24 +51,55 @@ class RepviajeController extends Controller
      */
     public function store(Request $request)
     {
-      $repviaje = repviaje::create($request->all());
-      $categorias = $request->input("categorias");
+      $repviaje = new repviaje;
+      $repviaje->cliente = $request->cliente;
+      $repviaje->origen = $request->origen;
+      $repviaje->destino = $request->destino;
+      $repviaje->estado = $request->estado;
+      $repviaje->unidad = $request->unidad;
+      $repviaje->camion = $request->camion;
+      $repviaje->proveedor = $request->proveedor;
+      $repviaje->referencia = $request->referencia;
+      $repviaje->tipo_carga = $request->tipo_carga;
+      $repviaje->tipo_viaje = $request->tipo_viaje;
+      $repviaje->zona_cruce = $request->zona_cruce;
+      $repviaje->fecha_carga = $request->fecha_carga;
+      $repviaje->hora_carga = $request->hora_carga;
+      $repviaje->fecha_descarga = $request->fecha_descarga;
+      $repviaje->hora_entrega = $request->hora_entrega;
+      $repviaje->status = $request->status;
+      $repviaje->comentario = $request->comentario;
+      $repviaje->po_o_ci = $request->po_o_ci;
+
+      $repviaje->flete = $request->flete;
+      $repviaje->moviento_falso = $request->moviento_falso;
+      $repviaje->transbordo = $request->transbordo;
+      $repviaje->maniobras_descarga = $request->maniobras_descarga;
+      $repviaje->sobrepeso = $request->sobrepeso;
+      $repviaje->estadias = $request->estadias;
+      $repviaje->seguro = $request->seguro;
+      $repviaje->moneda = $request->moneda;
+      $repviaje->cruce = $request->cruce;
+      $repviaje->demoras = $request->demoras;
+
+      $repviaje->subtotal = $repviaje->flete + $repviaje->moviento_falso
+                          + $repviaje->transbordo + $repviaje->maniobras_descarga
+                          + $repviaje->sobrepeso + $repviaje->estadias + $repviaje->seguro
+                          + $repviaje->cruce + $repviaje->demoras;
+      /*$repviaje->subtotal = $request->$subtotal;*/
+      $repviaje->iva = $repviaje->subtotal * '0.16';
+      /*$repviaje->iva = $request->iva;*/
+      $repviaje->ret = $repviaje->subtotal * '0.04';
+      /*$repviaje->ret = $request->ret;*/
+      $repviaje->total = $repviaje->subtotal + $repviaje->iva - $repviaje->ret;
+      /*$repviaje->total = $request->total;*/
+      $repviaje->save();
       return redirect()->route('repviajes.edit', $repviaje->id)
       ->with('info','Reporte viaje guardado con éxito');
+      /*$repviaje = repviaje::create($request->all());
+      return redirect()->route('repviajes.edit', $repviaje->id)
+      ->with('info','Reporte viaje guardado con éxito');*/
 
-
-      $repviaje = repviaje::create($request->all());
-      public function store(MensajeFormRequest $request)
-      {
-          $slug = uniqid();
-          $mensaje = new Mensaje(array(
-              'titulo' => $request->get('titulo'),
-              'contenido' => $request->get('contenido'),
-              'slug' => $slug
-          ));
-          $mensaje->save();
-          return redirect('/contacto')->with('status', 'Su ticket ha sido creado, su id única es ' . $slug);
-      }*/
     }
 
     /**
@@ -100,11 +131,57 @@ class RepviajeController extends Controller
      * @param  \App\repviaje  $repviaje
      * @return \Illuminate\Http\Response
      */
+    /*public function update(Request $request, repviaje $repviaje)*/
     public function update(Request $request, repviaje $repviaje)
     {
-      $repviaje->update($request->all());
+      //$repviaje = repviaje::find($request->id);
+      $repviaje->cliente = $request->cliente;
+      $repviaje->origen = $request->origen;
+      $repviaje->destino = $request->destino;
+      $repviaje->estado = $request->estado;
+      $repviaje->unidad = $request->unidad;
+      $repviaje->camion = $request->camion;
+      $repviaje->proveedor = $request->proveedor;
+      $repviaje->referencia = $request->referencia;
+      $repviaje->tipo_carga = $request->tipo_carga;
+      $repviaje->tipo_viaje = $request->tipo_viaje;
+      $repviaje->zona_cruce = $request->zona_cruce;
+      $repviaje->fecha_carga = $request->fecha_carga;
+      $repviaje->hora_carga = $request->hora_carga;
+      $repviaje->fecha_descarga = $request->fecha_descarga;
+      $repviaje->hora_entrega = $request->hora_entrega;
+      $repviaje->status = $request->status;
+      $repviaje->comentario = $request->comentario;
+      $repviaje->po_o_ci = $request->po_o_ci;
+
+      $repviaje->flete = $request->flete;
+      $repviaje->moviento_falso = $request->moviento_falso;
+      $repviaje->transbordo = $request->transbordo;
+      $repviaje->maniobras_descarga = $request->maniobras_descarga;
+      $repviaje->sobrepeso = $request->sobrepeso;
+      $repviaje->estadias = $request->estadias;
+      $repviaje->seguro = $request->seguro;
+      $repviaje->moneda = $request->moneda;
+      $repviaje->cruce = $request->cruce;
+      $repviaje->demoras = $request->demoras;
+
+      $repviaje->subtotal = $repviaje->flete + $repviaje->moviento_falso
+                          + $repviaje->transbordo + $repviaje->maniobras_descarga
+                          + $repviaje->sobrepeso + $repviaje->estadias + $repviaje->seguro
+                          + $repviaje->cruce + $repviaje->demoras;
+      /*$repviaje->subtotal = $request->$subtotal;*/
+      $repviaje->iva = $repviaje->subtotal * '0.16';
+      /*$repviaje->iva = $request->iva;*/
+      $repviaje->ret = $repviaje->subtotal * '0.04';
+      /*$repviaje->ret = $request->ret;*/
+      $repviaje->total = $repviaje->subtotal + $repviaje->iva - $repviaje->ret;
+      /*$repviaje->total = $request->total;*/
+      $repviaje->save();
       return redirect()->route('repviajes.edit', $repviaje->id)
       ->with('info','Reporte viaje actualizado con éxito');
+      /*$repviaje->update($request->all());
+      return redirect()->route('repviajes.edit', $repviaje->id)
+      ->with('info','Reporte viaje actualizado con éxito');*/
     }
 
     /**

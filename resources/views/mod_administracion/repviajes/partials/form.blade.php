@@ -209,41 +209,41 @@
       <small class="form-text text-danger">{{ $errors->first('demoras') }}</small>
   @endif
 </div>
-<div class="col-lg-12">
+<!--<div class="col-lg-12">
   <div class="widget-small warning coloured-icon"><i class="icon fa fa-usd fa-3x"></i>
     <div class="info">
       <h4>Costo final</h4>
     </div>
   </div>
-</div>
-<div class="form-group col-md-2">
+</div>-->
+<!--<div class="form-group col-md-2">
   {{ Form::label('subtotal', 'Subtotal') }}
   {{ Form::text('subtotal', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'subtotal']) }}
   @if ($errors->has('subtotal'))
       <small class="form-text text-danger">{{ $errors->first('subtotal') }}</small>
   @endif
-</div>
-<div class="form-group col-md-2">
+</div>-->
+<!--<div class="form-group col-md-2">
   {{ Form::label('iva', 'IVA 16%') }}
   {{ Form::text('iva', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'iva']) }}
   @if ($errors->has('iva'))
       <small class="form-text text-danger">{{ $errors->first('iva') }}</small>
   @endif
-</div>
-<div class="form-group col-md-2">
+</div>-->
+<!--<div class="form-group col-md-2">
   {{ Form::label('ret', 'RET 4%') }}
   {{ Form::text('ret', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'ret']) }}
   @if ($errors->has('ret'))
       <small class="form-text text-danger">{{ $errors->first('ret') }}</small>
   @endif
-</div>
-<div class="form-group col-md-3">
+</div>-->
+<!--<div class="form-group col-md-3">
   {{ Form::label('total', 'Total') }}
   {{ Form::text('total', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'total']) }}
   @if ($errors->has('total'))
       <small class="form-text text-danger">{{ $errors->first('total') }}</small>
   @endif
-</div>
+</div>-->
 <div class="tile-footer col-md-12">
 {{ Form::submit('Guardar', ['class'=> 'btn btn-sm btn-primary']) }}
 </div>
