@@ -64,7 +64,7 @@
                 <p><strong>Fecha de descarga: </strong><label class="text-muted">{{ $repviaje->fecha_carga }}</label></p>
               </div>
               <div class="col-md-2">
-                <p><strong>Hora de entrega: </strong><label class="text-muted">{{ $repviaje->hora_carga }}</label></p>
+                <p><strong>Hora de entrega: </strong><label class="text-muted">{{ $repviaje->hora_entrega }}</label></p>
               </div>
               <div class="col-md-2">
                 <p><strong>Status: </strong><label class="text-muted">
@@ -84,6 +84,9 @@
               </div>
               <div class="col-md-2">
                 <p><strong>Comentario: </strong><label class="text-muted">{{ $repviaje->comentario }}</label></p>
+              </div>
+              <div class="col-md-2">
+                <p><strong>Efectividad de viaje: </strong><label class="text-muted">{{ $repviaje->efectividad_viaje }}</label></p>
               </div>
               <div class="col-lg-12">
                 <div class="widget-small warning coloured-icon"><i class="icon fa fa-usd fa-3x"></i>
@@ -143,10 +146,10 @@
                 <p><strong>Subtotal: </strong><label class="text-muted">$ {{ $repviaje->subtotal }}</label></p>
               </div>
               <div class="col-md-2">
-                <p><strong>IVA: </strong><label class="text-muted">$ {{ $repviaje->iva }}</label></p>
+                <p><strong>IVA 16 %: </strong><label class="text-muted">$ {{ $repviaje->iva }}</label></p>
               </div>
               <div class="col-md-2">
-                <p><strong>RET: </strong><label class="text-muted">$ {{ $repviaje->ret }}</label></p>
+                <p><strong>RET 4 %: </strong><label class="text-muted">$ {{ $repviaje->ret }}</label></p>
               </div>
               <div class="blockquote col-md-2">
                 <p><strong>Total: </strong><label class="text-muted">$ {{ $repviaje->total }}</label></p>

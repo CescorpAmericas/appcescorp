@@ -100,8 +100,8 @@
 <div class="form-group col-md-2">
   {{ Form::label('hora_entrega', 'Hora de entrega') }}
   {{ Form::text('hora_entrega', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'hora_entrega']) }}
-  @if ($errors->has('hora_carga'))
-      <small class="form-text text-danger">{{ $errors->first('hora_carga') }}</small>
+  @if ($errors->has('hora_entrega'))
+      <small class="form-text text-danger">{{ $errors->first('hora_entrega') }}</small>
   @endif
 </div>
 <div class="form-group col-md-2">
@@ -109,6 +109,13 @@
   {{ Form::select('status',['1'=>'Programado','2'=>'Proceso','3'=>'Concluido','4'=>'Cancelado'], null, ['class'=> 'form-control','required' => 'required ', 'id'=>'status']) }}
   @if ($errors->has('status'))
       <small class="form-text text-danger">{{ $errors->first('status') }}</small>
+  @endif
+</div>
+<div class="form-group col-md-2">
+  {{ Form::label('efectividad_viaje', 'Efectividad de viaje') }}
+  {{ Form::select('efectividad_viaje',['Bien'=>'Bien','Regular'=>'Regular','Mal'=>'Mal'], null, ['class'=> 'form-control','required' => 'required ', 'id'=>'efectividad_viaje']) }}
+  @if ($errors->has('efectividad_viaje'))
+      <small class="form-text text-danger">{{ $errors->first('efectividad_viaje') }}</small>
   @endif
 </div>
 <div class="form-group col-md-4">
@@ -190,7 +197,7 @@
 </div>
 <div class="form-group col-md-2">
   {{ Form::label('moneda', 'Moneda') }}
-  {{ Form::text('moneda', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'moneda']) }}
+  {{ Form::select('moneda',['MXN'=>'MXN','USD'=>'USD','EUR'=>'EUR','CAD'=>'CAD','JPY'=>'JPY','AUD'=>'AUD','CNY'=>'CNY','NZD'=>'NZD'], null, ['class'=> 'form-control','required' => 'required ', 'id'=>'moneda']) }}
   @if ($errors->has('moneda'))
       <small class="form-text text-danger">{{ $errors->first('moneda') }}</small>
   @endif

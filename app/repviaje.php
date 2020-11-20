@@ -23,6 +23,7 @@ class repviaje extends Model
     'fecha_descarga',
     'hora_entrega',
     'status',
+    'efectividad_viaje',
     'comentario',
     'po_o_ci',
     'flete',

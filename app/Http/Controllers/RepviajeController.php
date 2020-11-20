@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\repviaje;
+use App\Http\Requests\RepviajeStoreRequest;
+use App\Http\Requests\RepviajeUpdateRequest;
 use Illuminate\Http\Request;
 
 class RepviajeController extends Controller
@@ -68,6 +70,7 @@ class RepviajeController extends Controller
       $repviaje->fecha_descarga = $request->fecha_descarga;
       $repviaje->hora_entrega = $request->hora_entrega;
       $repviaje->status = $request->status;
+      $repviaje->efectividad_viaje = $request->efectividad_viaje;
       $repviaje->comentario = $request->comentario;
       $repviaje->po_o_ci = $request->po_o_ci;
 
@@ -151,6 +154,7 @@ class RepviajeController extends Controller
       $repviaje->fecha_descarga = $request->fecha_descarga;
       $repviaje->hora_entrega = $request->hora_entrega;
       $repviaje->status = $request->status;
+      $repviaje->efectividad_viaje = $request->efectividad_viaje;
       $repviaje->comentario = $request->comentario;
       $repviaje->po_o_ci = $request->po_o_ci;
 

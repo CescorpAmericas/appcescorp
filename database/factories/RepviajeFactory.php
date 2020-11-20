@@ -23,6 +23,7 @@ $factory->define(repviaje::class, function (Faker $faker) {
       'fecha_descarga' => $faker->dateTime,
       'hora_entrega' => $faker->time,
       'status' => $faker->biasedNumberBetween('1','3'),
+      'efectividad_viaje' => $faker->randomElement(['Bien','Regular','Mal']),
       'comentario' => $faker->randomElement(['Bien','Mal','Super Mal']),
       'po_o_ci' => $faker->biasedNumberBetween('2000','5000'),
       'flete' => $faker->biasedNumberBetween('2000','9000'),

@@ -32,6 +32,7 @@ class CreateRepviajesTable extends Migration
             $table->date('fecha_descarga', 50)->required();
             $table->time('hora_entrega')->required();
             $table->integer('status')->required();
+            $table->string('efectividad_viaje')->required();
             $table->string('comentario',200)->required();
             $table->string('po_o_ci')->required();
             $table->decimal('flete')->required();
