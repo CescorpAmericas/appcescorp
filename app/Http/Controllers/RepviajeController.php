@@ -51,7 +51,7 @@ class RepviajeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RepviajeStoreRequest $request)
     {
       $repviaje = new repviaje;
       $repviaje->cliente = $request->cliente;
@@ -135,7 +135,7 @@ class RepviajeController extends Controller
      * @return \Illuminate\Http\Response
      */
     /*public function update(Request $request, repviaje $repviaje)*/
-    public function update(Request $request, repviaje $repviaje)
+    public function update(RepviajeUpdateRequest $request, repviaje $repviaje)
     {
       //$repviaje = repviaje::find($request->id);
       $repviaje->cliente = $request->cliente;

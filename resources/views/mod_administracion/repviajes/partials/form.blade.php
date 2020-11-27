@@ -88,6 +88,7 @@
 </div>
 <div class="form-group col-md-2">
   {{ Form::label('hora_carga', 'Hora de carga') }}
+  <!--<input type="time" name="hora_carga" id = "hora_carga" class="form-control required">-->
   {{ Form::text('hora_carga', null, ['class'=> 'form-control', 'required' => 'required ', 'id'=>'hora_carga']) }}
   @if ($errors->has('hora_carga'))
       <small class="form-text text-danger">{{ $errors->first('hora_carga') }}</small>

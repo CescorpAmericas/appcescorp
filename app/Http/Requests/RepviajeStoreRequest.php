@@ -36,9 +36,9 @@ class RepviajeStoreRequest extends FormRequest
           'tipo_viaje' => 'required|min:1|max:50',
           'zona_cruce' => 'required|min:1|max:50',
           'fecha_carga' => 'required|date',
-          'hora_carga' => 'required|date('H:i:s')',
+          'hora_carga' => 'required',
           'fecha_descarga' => 'required|date',
-          'hora_entrega' => 'required|date('H:i:s')',
+          'hora_entrega' => 'required',
           'status' => 'required|integer',
           'efectividad_viaje' => 'required|min:1|max:50',
           'comentario' => 'required|min:1|max:100',
@@ -53,10 +53,6 @@ class RepviajeStoreRequest extends FormRequest
           'moneda' => 'required|min:1|max:50',
           'cruce' => 'required|numeric',
           'demoras' => 'required|numeric',
-          'subtotal' => 'required|numeric',
-          'iva' => 'required|numeric',
-          'ret' => 'required|numeric',
-          'total' => 'required|numeric',
         ];
     }
 }
